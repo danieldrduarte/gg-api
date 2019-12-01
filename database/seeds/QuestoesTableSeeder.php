@@ -13,7 +13,7 @@ class QuestoesTableSeeder extends Seeder
     {
         for($banca = 1; $banca <= 5; $banca++){
             for($orgao = 1; $orgao <= 6; $orgao++) {
-                factory(App\Questao::class, 10000)->create()->each(function ($questao) use ($banca, $orgao){
+                factory(App\Questao::class, 1000)->create()->each(function ($questao) use ($banca, $orgao){
 
                     $assunto = 0;
                     while (in_array($assunto,[0,1,40,68])){

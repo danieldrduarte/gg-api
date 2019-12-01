@@ -18,7 +18,7 @@ use Illuminate\Http\Request;
 //});
 
 
-Route::group(['prefix' => 'v1'], function(){
+Route::group(['middleware' => ['api', 'cors'], 'prefix' => 'v1'], function(){
     Route::apiResource('banca', 'BancaController');
     Route::apiResource('orgao', 'OrgaoController');
     Route::apiResource('programa', 'ProgramaController');
