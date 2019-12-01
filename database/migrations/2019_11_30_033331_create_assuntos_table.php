@@ -15,7 +15,7 @@ class CreateAssuntosTable extends Migration
     {
         Schema::create('assuntos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedBigInteger('assunto_pai_id');
+            $table->unsignedBigInteger('assunto_pai_id')->nullable();
             $table->string('nome');
             $table->timestamps();
             $table->softDeletes();

@@ -15,6 +15,7 @@ class CreateOrgaosTable extends Migration
     {
         Schema::create('orgaos', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('sigla');
             $table->string('nome');
             $table->softDeletes();
             $table->timestamps();
