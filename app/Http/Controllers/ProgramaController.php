@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Assunto;
 use App\Programa;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
@@ -111,38 +112,6 @@ class ProgramaController extends Controller
      */
     public function destroy($id)
     {
-        try {
-            $programa = Programa::findOrFail($id);
-            $programa->delete();
-
-            return response()->json([
-                'error' => false,
-                'message'  => "O Programa foi deletado com sucesso",
-            ], 200);
-        }catch (\Exception $e){
-            $response = response()->json([
-                'error' => true,
-                'exception' => $e->getMessage(),
-                'message' => 'Não foi possível deletar o Programa',
-                'data'  => [],
-            ], 400);
-        }
-
-        return $response;
-    }
-
-
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\JsonResponse
-     */
-    public function getArvoresAssuntos($id)
-    {
-
-        dd($id); die();
         try {
             $programa = Programa::findOrFail($id);
             $programa->delete();

@@ -22,5 +22,6 @@ Route::group(['prefix' => 'v1'], function(){
     Route::apiResource('banca', 'BancaController');
     Route::apiResource('orgao', 'OrgaoController');
     Route::apiResource('programa', 'ProgramaController');
-    Route::get('programa/{id}/arvores-assuntos', 'ProgramaController@getArvoresAssuntos');
+
+    Route::get('arvores-assuntos/orgao/{orgao_id}/banca/{banca_id}', 'AssuntoController@getArvoresByOrgaoAndBanca');
 });
