@@ -22,24 +22,5 @@ Route::group(['prefix' => 'v1'], function(){
     Route::apiResource('banca', 'BancaController');
     Route::apiResource('orgao', 'OrgaoController');
     Route::apiResource('programa', 'ProgramaController');
-
-//    Route::group(['prefix' => 'customers'],function(){
-//        Route::get('/{id}/orders',[
-//            'uses' => 'CustomerController@orders',
-//            'as' => 'customers.orders',
-//        ]);
-//
-//        Route::post('/{customer_id}/orders/{order_id}',[
-//            'uses' => 'CustomerController@order',
-//            'as' => 'orders.details',
-//        ]);
-//
-//        Route::post('/{id}/orders',[
-//            'uses' => 'CustomerController@order',
-//            'as' => 'customers.orders',
-//        ]);
-//    });
-//
-//    Route::apiResource('inventories', 'InventoryController');
-//    Route::apiResource('orders', 'OrderController');
+    Route::get('programa/{id}/arvores-assuntos', 'ProgramaController@getArvoresAssuntos');
 });

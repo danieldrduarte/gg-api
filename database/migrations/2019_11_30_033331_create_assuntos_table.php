@@ -17,6 +17,7 @@ class CreateAssuntosTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('assunto_pai_id')->nullable();
             $table->string('nome');
+            $table->string('ordem');
             $table->timestamps();
             $table->softDeletes();
 
