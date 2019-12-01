@@ -31,6 +31,7 @@ class AssuntosTableSeeder extends Seeder
             ['id' => '016', 'assunto_pai_id' => '008', 'nome' => 'Tritongo'],
             ['id' => '017', 'assunto_pai_id' => '008', 'nome' => 'Hiato'],
             ['id' => '018', 'assunto_pai_id' => '008', 'nome' => 'Divisão Silábica'],
+            ['id' => '019', 'assunto_pai_id' => '008', 'nome' => 'Otras relacionadas a fonologia'],
             ['id' => '020', 'assunto_pai_id' => '001', 'nome' => 'Ortografia'],
             ['id' => '021', 'assunto_pai_id' => '020', 'nome' => 'Alfabeto Português'],
             ['id' => '022', 'assunto_pai_id' => '020', 'nome' => 'Emprego de Letras'],

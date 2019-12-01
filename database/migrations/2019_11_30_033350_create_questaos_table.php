@@ -17,9 +17,9 @@ class CreateQuestaosTable extends Migration
             $table->bigIncrements('id');
             $table->string('titulo');
             $table->string('descricao');
-            $table->unsignedBigInteger('assunto_id');
-            $table->unsignedBigInteger('banca_id');
-            $table->unsignedBigInteger('orgao_id');
+            $table->unsignedBigInteger('assunto_id')->nullable();
+            $table->unsignedBigInteger('banca_id')->nullable();
+            $table->unsignedBigInteger('orgao_id')->nullable();
             $table->softDeletes();
             $table->timestamps();
 
