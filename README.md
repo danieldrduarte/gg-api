@@ -1,4 +1,4 @@
-## Projeto processo seletivo GG educacional
+## Projeto processo seletivo GG educacional - API
 
 Projeto criado utilizando o ambiente de desenvolvimento <a href="https://laradock.io" target="_blank">Laradock.</a>
 
