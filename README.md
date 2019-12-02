@@ -39,3 +39,5 @@ O endereço da documentação da API pode variar de acordo com as configuraçõe
 http://localhost/api/documentation
 ```
 
+
+![alt text](https://raw.githubusercontent.com/danieldrduarte/gg-web/master/img/1.png)

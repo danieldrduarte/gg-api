@@ -9,7 +9,43 @@ use Illuminate\Support\Facades\App;
 class AssuntoController extends Controller
 {
 
-
+    /**
+     * @OA\Get(
+     *      path="/api/v1/arvores-assuntos/orgao/{orgao_id}/banca/{banca_id}",
+     *      operationId="getArvoresByOrgaoAndBanca",
+     *      tags={"Assunto"},
+     *      summary="Arvore de assuntos",
+     *      description="Recupera a lista de orgãos cadastrados no sistema",
+     *      @OA\Parameter(
+     *          name="orgao_id",
+     *          description="ID do orgão",
+     *          required=true,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="integer"
+     *          )
+     *      ),
+     *      @OA\Parameter(
+     *          name="banca_id",
+     *          description="ID da banca",
+     *          required=true,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="integer"
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="successful operation"
+     *       ),
+     *       @OA\Response(
+     *          response=400,
+     *          description="Bad request"
+     *       ),
+     *     )
+     *
+     * Recupera a lista de orgãos cadastrados no sistema
+     */
     public function getArvoresByOrgaoAndBanca($orgao_id, $banca_id)
     {
         try {
