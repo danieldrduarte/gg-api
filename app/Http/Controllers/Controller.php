@@ -9,5 +9,15 @@ use Illuminate\Routing\Controller as BaseController;
 
 class Controller extends BaseController
 {
+
+    /**
+     * @OA\Info(
+     *      version="1.0.0",
+     *      title="Processo seletivo GG Educacional - Árvore de assuntos",
+     *      @OA\Contact(
+     *          email="danieldrduarte@gmail.com"
+     *      )
+     * )
+     */
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 }

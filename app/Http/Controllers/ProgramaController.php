@@ -10,9 +10,19 @@ use Illuminate\Support\Facades\App;
 class ProgramaController extends Controller
 {
     /**
-     * Exibe a lista com todos os programas
+     * @OA\Get(
+     *      path="/api/v1/programa",
+     *      operationId="index",
+     *      tags={"Programa"},
+     *      summary="Listagem",
+     *      description="Recupera a lista de programas cadastrados no sistema",
+     *      @OA\Response(
+     *          response=200,
+     *          description="successful operation"
+     *       ),
+     *     )
      *
-     * @return \Illuminate\Http\JsonResponse
+     * Returns list of projects
      */
     public function index()
     {
@@ -26,10 +36,28 @@ class ProgramaController extends Controller
     }
 
     /**
-     * Display the specified resource.
+     * @OA\Get(
+     *      path="/api/v1/programa/{id}",
+     *      operationId="show",
+     *      tags={"Programa"},
+     *      summary="Recuperar",
+     *      description="Recupera um registro de programa cadastrado no sistema",
+     *      @OA\Parameter(
+     *          name="id",
+     *          description="ID do programa",
+     *          required=true,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="integer"
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="successful operation"
+     *       ),
+     *     )
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\JsonResponse
+     * Recupera um registro de programa cadastrado no sistema
      */
     public function show($id)
     {
@@ -42,10 +70,50 @@ class ProgramaController extends Controller
     }
 
     /**
-     * Store a newly created resource in storage.
+     * @OA\Post(
+     *      path="/api/v1/programa",
+     *      operationId="store",
+     *      tags={"Programa"},
+     *      summary="Salvar",
+     *      description="Salva um registro de programa no banco de dados",
+     *      @OA\Parameter(
+     *          name="orgao_id",
+     *          description="ID do orgão",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="integer"
+     *          )
+     *      ),
+     *      @OA\Parameter(
+     *          name="banca_id",
+     *          description="ID do banca",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="integer"
+     *          )
+     *      ),
+     *      @OA\Parameter(
+     *          name="nome",
+     *          description="Nome do programa",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="successful operation"
+     *       ),
+     *       @OA\Response(
+     *          response=400,
+     *          description="Bad request"
+     *       ),
+     * )
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\JsonResponse
+     * Recupera um registro de programa cadastrado no sistema
      */
     public function store(Request $request)
     {
@@ -70,11 +138,59 @@ class ProgramaController extends Controller
     }
 
     /**
-     * Update the specified resource in storage.
+     * @OA\Put(
+     *      path="/api/v1/programa/{id}",
+     *      operationId="update",
+     *      tags={"Programa"},
+     *      summary="Atualizar",
+     *      description="Atualiza um registro de programa no banco de dados",
+     *      @OA\Parameter(
+     *          name="id",
+     *          description="ID do programa",
+     *          required=true,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="integer"
+     *          )
+     *      ),
+     *      @OA\Parameter(
+     *          name="orgao_id",
+     *          description="ID do orgão",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="integer"
+     *          )
+     *      ),
+     *      @OA\Parameter(
+     *          name="banca_id",
+     *          description="ID do banca",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="integer"
+     *          )
+     *      ),
+     *      @OA\Parameter(
+     *          name="nome",
+     *          description="Nome do programa",
+     *          required=true,
+     *          in="query",
+     *          @OA\Schema(
+     *              type="string"
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="successful operation"
+     *       ),
+     *       @OA\Response(
+     *          response=400,
+     *          description="Bad request"
+     *       ),
+     * )
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\JsonResponse
+     * Recupera um registro de programa cadastrado no sistema
      */
     public function update(Request $request, $id)
     {
@@ -105,10 +221,32 @@ class ProgramaController extends Controller
     }
 
     /**
-     * Remove the specified resource from storage.
+     * @OA\Delete(
+     *      path="/api/v1/programa/{id}",
+     *      operationId="destroy",
+     *      tags={"Programa"},
+     *      summary="Deletar",
+     *      description="Deleta um registro de programa cadastrado no sistema",
+     *      @OA\Parameter(
+     *          name="id",
+     *          description="ID do programa",
+     *          required=true,
+     *          in="path",
+     *          @OA\Schema(
+     *              type="integer"
+     *          )
+     *      ),
+     *      @OA\Response(
+     *          response=200,
+     *          description="successful operation"
+     *       ),
+     *       @OA\Response(
+     *          response=400,
+     *          description="Bad request"
+     *       ),
+     *     )
      *
-     * @param  int  $id
-     * @return \Illuminate\Http\JsonResponse
+     * Delete um registro de programa cadastrado no sistema
      */
     public function destroy($id)
     {

@@ -9,13 +9,7 @@ use Illuminate\Support\Facades\App;
 class AssuntoController extends Controller
 {
 
-    /**
-     * Recupera as árvores de assuntos pelo orgão e banca informados
-     *
-     * @param  int  $orgao_id
-     * @param  int  $banca_id
-     * @return \Illuminate\Http\JsonResponse
-     */
+
     public function getArvoresByOrgaoAndBanca($orgao_id, $banca_id)
     {
         try {

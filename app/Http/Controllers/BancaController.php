@@ -7,10 +7,21 @@ use Illuminate\Http\Request;
 
 class BancaController extends Controller
 {
+
     /**
-     * Exibe a lista com todas as bancas
+     * @OA\Get(
+     *      path="/api/v1/banca",
+     *      operationId="index",
+     *      tags={"Banca"},
+     *      summary="Listagem",
+     *      description="Recupera a lista de bancas cadastradas no sistema",
+     *      @OA\Response(
+     *          response=200,
+     *          description="successful operation"
+     *       ),
+     *     )
      *
-     * @return \Illuminate\Http\JsonResponse
+     * Retorna uma lista com as bancas cadastradas
      */
     public function index()
     {
