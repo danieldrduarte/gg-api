@@ -2,7 +2,7 @@
 
 Projeto criado utilizando o ambiente de desenvolvimento <a href="https://laradock.io" target="_blank">Laradock.</a>
 
-Para executar o projeto é necessário subir os containers do php e do mysql do laradock:
+Para executar o projeto é necessário subir os containers do php e do mysql do laradock (dentro da pasta 'laradock'):
 
 ```
 docker-compose up -d nginx mysql
